@@ -1,5 +1,6 @@
 package io.redspace.ironsspellbooks.compat.tetra;
 
+import com.divot.tetraenlarged.items.modular.impl.ModularLargeBladedItem;
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.compat.tetra.effects.FreezeTetraEffect;
@@ -54,7 +55,7 @@ public class TetraActualImpl implements ITetraProxy {
 
     @Override
     public boolean canImbue(ItemStack itemStack) {
-        if (itemStack.getItem() instanceof ModularBladedItem) {
+        if (itemStack.getItem() instanceof ModularBladedItem || itemStack.getItem() instanceof ModularLargeBladedItem) {
             return true;
         }
         return false;
